@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Textarea } from "@/components/ui/textarea";
-import { Heart, MessageCircle, Share, Image, Smile, Send, MoreHorizontal } from "lucide-react";
+import { Heart, MessageCircle, Share, Image, Smile, Send, MoreHorizontal, Plus, Video, Repeat2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
-const LifestyleTab = () => {
+export default function LifestyleTab() {
   const [newPost, setNewPost] = useState("");
   const [isPostModalOpen, setIsPostModalOpen] = useState(false);
   const { toast } = useToast();
@@ -93,28 +93,28 @@ const LifestyleTab = () => {
     className: "text-2xl font-bold text-gray-900"
   }, "Student Lifestyle"), /*#__PURE__*/React.createElement("p", {
     className: "text-gray-600"
-  }, "Share your campus experiences")), /*#__PURE__*/React.createElement(_dialog.Dialog, {
+  }, "Share your campus experiences")), /*#__PURE__*/React.createElement(Dialog, {
     open: isPostModalOpen,
     onOpenChange: setIsPostModalOpen
-  }, /*#__PURE__*/React.createElement(_dialog.DialogTrigger, {
+  }, /*#__PURE__*/React.createElement(DialogTrigger, {
     asChild: true
-  }, /*#__PURE__*/React.createElement(_button.Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     className: "bg-green-500 hover:bg-green-600"
-  }, /*#__PURE__*/React.createElement(_lucideReact.Plus, {
+  }, /*#__PURE__*/React.createElement(Plus, {
     className: "w-4 h-4 mr-2"
-  }), "New Post")), /*#__PURE__*/React.createElement(_dialog.DialogContent, {
+  }), "New Post")), /*#__PURE__*/React.createElement(DialogContent, {
     className: "max-w-lg"
-  }, /*#__PURE__*/React.createElement(_dialog.DialogHeader, null, /*#__PURE__*/React.createElement(_dialog.DialogTitle, null, "Create New Post")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(DialogHeader, null, /*#__PURE__*/React.createElement(DialogTitle, null, "Create New Post")), /*#__PURE__*/React.createElement("div", {
     className: "space-y-4"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex items-start space-x-3"
-  }, /*#__PURE__*/React.createElement(_avatar.Avatar, {
+  }, /*#__PURE__*/React.createElement(Avatar, {
     className: "w-10 h-10"
-  }, /*#__PURE__*/React.createElement(_avatar.AvatarImage, {
+  }, /*#__PURE__*/React.createElement(AvatarImage, {
     src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=40&h=40&fit=crop&crop=face"
-  }), /*#__PURE__*/React.createElement(_avatar.AvatarFallback, null, "JS")), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement(AvatarFallback, null, "JS")), /*#__PURE__*/React.createElement("div", {
     className: "flex-1"
-  }, /*#__PURE__*/React.createElement(_textarea.Textarea, {
+  }, /*#__PURE__*/React.createElement(Textarea, {
     placeholder: "What's happening on campus?",
     value: newPost,
     onChange: function onChange(e) {
@@ -126,53 +126,53 @@ const LifestyleTab = () => {
     className: "flex items-center justify-between pt-4 border-t"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center space-x-4"
-  }, /*#__PURE__*/React.createElement(_button.Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     variant: "ghost",
     size: "sm",
     className: "text-green-500 hover:text-green-600"
-  }, /*#__PURE__*/React.createElement(_lucideReact.Image, {
+  }, /*#__PURE__*/React.createElement(Image, {
     className: "w-4 h-4"
-  })), /*#__PURE__*/React.createElement(_button.Button, {
+  })), /*#__PURE__*/React.createElement(Button, {
     variant: "ghost",
     size: "sm",
     className: "text-green-500 hover:text-green-600"
-  }, /*#__PURE__*/React.createElement(_lucideReact.Video, {
+  }, /*#__PURE__*/React.createElement(Video, {
     className: "w-4 h-4"
-  })), /*#__PURE__*/React.createElement(_button.Button, {
+  })), /*#__PURE__*/React.createElement(Button, {
     variant: "ghost",
     size: "sm",
     className: "text-green-500 hover:text-green-600"
-  }, /*#__PURE__*/React.createElement(_lucideReact.Smile, {
+  }, /*#__PURE__*/React.createElement(Smile, {
     className: "w-4 h-4"
   }))), /*#__PURE__*/React.createElement("div", {
     className: "flex gap-2"
-  }, /*#__PURE__*/React.createElement(_button.Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     variant: "outline",
     size: "sm",
     onClick: function onClick() {
       return setIsPostModalOpen(false);
     }
-  }, "Cancel"), /*#__PURE__*/React.createElement(_button.Button, {
+  }, "Cancel"), /*#__PURE__*/React.createElement(Button, {
     size: "sm",
     onClick: handleCreatePost,
     className: "bg-green-500 hover:bg-green-600"
   }, "Post"))))))), /*#__PURE__*/React.createElement("div", {
     className: "space-y-4"
   }, posts.map(function (post) {
-    return /*#__PURE__*/React.createElement(_card.Card, {
+    return /*#__PURE__*/React.createElement(Card, {
       key: post.id,
       className: "hover:shadow-md transition-shadow"
-    }, /*#__PURE__*/React.createElement(_card.CardHeader, {
+    }, /*#__PURE__*/React.createElement(CardHeader, {
       className: "pb-3"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex items-start justify-between"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex items-center space-x-3"
-    }, /*#__PURE__*/React.createElement(_avatar.Avatar, {
+    }, /*#__PURE__*/React.createElement(Avatar, {
       className: "w-10 h-10"
-    }, /*#__PURE__*/React.createElement(_avatar.AvatarImage, {
+    }, /*#__PURE__*/React.createElement(AvatarImage, {
       src: post.avatar
-    }), /*#__PURE__*/React.createElement(_avatar.AvatarFallback, null, post.author.split(' ').map(function (n) {
+    }), /*#__PURE__*/React.createElement(AvatarFallback, null, post.author.split(' ').map(function (n) {
       return n[0];
     }).join(''))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
       className: "flex items-center space-x-2"
@@ -184,12 +184,12 @@ const LifestyleTab = () => {
       className: "text-gray-400"
     }, "\u2022"), /*#__PURE__*/React.createElement("span", {
       className: "text-gray-500 text-sm"
-    }, post.timeAgo)))), /*#__PURE__*/React.createElement(_button.Button, {
+    }, post.timeAgo)))), /*#__PURE__*/React.createElement(Button, {
       variant: "ghost",
       size: "sm"
-    }, /*#__PURE__*/React.createElement(_lucideReact.MoreHorizontal, {
+    }, /*#__PURE__*/React.createElement(MoreHorizontal, {
       className: "w-4 h-4"
-    })))), /*#__PURE__*/React.createElement(_card.CardContent, {
+    })))), /*#__PURE__*/React.createElement(CardContent, {
       className: "space-y-4"
     }, /*#__PURE__*/React.createElement("p", {
       className: "text-gray-800 leading-relaxed"
@@ -203,36 +203,35 @@ const LifestyleTab = () => {
       className: "flex items-center justify-between pt-3 border-t"
     }, /*#__PURE__*/React.createElement("div", {
       className: "flex items-center space-x-6"
-    }, /*#__PURE__*/React.createElement(_button.Button, {
+    }, /*#__PURE__*/React.createElement(Button, {
       variant: "ghost",
       size: "sm",
       className: "flex items-center space-x-2 text-gray-600 hover:text-red-500"
-    }, /*#__PURE__*/React.createElement(_lucideReact.Heart, {
+    }, /*#__PURE__*/React.createElement(Heart, {
       className: "w-4 h-4"
-    }), /*#__PURE__*/React.createElement("span", null, post.likes)), /*#__PURE__*/React.createElement(_button.Button, {
+    }), /*#__PURE__*/React.createElement("span", null, post.likes)), /*#__PURE__*/React.createElement(Button, {
       variant: "ghost",
       size: "sm",
       className: "flex items-center space-x-2 text-gray-600 hover:text-blue-500"
-    }, /*#__PURE__*/React.createElement(_lucideReact.MessageCircle, {
+    }, /*#__PURE__*/React.createElement(MessageCircle, {
       className: "w-4 h-4"
-    }), /*#__PURE__*/React.createElement("span", null, post.comments)), /*#__PURE__*/React.createElement(_button.Button, {
+    }), /*#__PURE__*/React.createElement("span", null, post.comments)), /*#__PURE__*/React.createElement(Button, {
       variant: "ghost",
       size: "sm",
       className: "flex items-center space-x-2 text-gray-600 hover:text-green-500"
-    }, /*#__PURE__*/React.createElement(_lucideReact.Repeat2, {
+    }, /*#__PURE__*/React.createElement(Repeat2, {
       className: "w-4 h-4"
-    }), /*#__PURE__*/React.createElement("span", null, post.reposts)), /*#__PURE__*/React.createElement(_button.Button, {
+    }), /*#__PURE__*/React.createElement("span", null, post.reposts)), /*#__PURE__*/React.createElement(Button, {
       variant: "ghost",
       size: "sm",
       className: "text-gray-600 hover:text-blue-500"
-    }, /*#__PURE__*/React.createElement(_lucideReact.Share, {
+    }, /*#__PURE__*/React.createElement(Share, {
       className: "w-4 h-4"
     }))))));
   })), /*#__PURE__*/React.createElement("div", {
     className: "text-center pt-4"
-  }, /*#__PURE__*/React.createElement(_button.Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     variant: "outline",
     className: "w-full md:w-auto"
   }, "Load More Posts")));
-};
-var _default = exports["default"] = LifestyleTab;
+}
